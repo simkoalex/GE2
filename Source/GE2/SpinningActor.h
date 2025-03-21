@@ -51,4 +51,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	int GetNumberOfSpins();
+
+	virtual void OnConstruction(const FTransform& Transform) override;
 };

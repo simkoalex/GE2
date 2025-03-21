@@ -77,3 +77,10 @@ int ASpinningActor::GetNumberOfSpins()
 {
 	return NumberOfSpins;
 }
+
+
+void ASpinningActor::OnConstruction(const FTransform& Transform)
+{
+	Super::OnConstruction(Transform);
+	UKismetSystemLibrary::PrintString(this, FString::FromInt(Threshold));
+}
