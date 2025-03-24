@@ -28,22 +28,22 @@ void AMyLevelActor::BeginPlay()
 
 	
 	//UClass *SpinningActorClass = ASpinningActor::StaticClass();
-	if (SpinningActorClass == nullptr)
-	{
-		return;
-	}
-
-	
-	UWorld* World = GetWorld();
-	FTransform SpinningTransform;
-	SpinningTransform.SetLocation(FVector(0, 0, 100));
-	
-	if (ASpinningActor *Actor = World->SpawnActorDeferred<ASpinningActor>(SpinningActorClass, SpinningTransform))
-	{
-		Actor->Threshold = 7;
-		/// sadsds
-		UGameplayStatics::FinishSpawningActor(Actor, SpinningTransform);
-	}
+	// if (SpinningActorClass == nullptr)
+	// {
+	// 	return;
+	// }
+	//
+	//
+	// UWorld* World = GetWorld();
+	// FTransform SpinningTransform;
+	// SpinningTransform.SetLocation(FVector(0, 0, 100));
+	//
+	// if (ASpinningActor *Actor = World->SpawnActorDeferred<ASpinningActor>(SpinningActorClass, SpinningTransform))
+	// {
+	// 	Actor->Threshold = 7;
+	// 	/// sadsds
+	// 	UGameplayStatics::FinishSpawningActor(Actor, SpinningTransform);
+	// }
 }
 
 // Called every frame
