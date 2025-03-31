@@ -29,6 +29,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	bool Dancing;
 
+	UPROPERTY(EditAnywhere)
+	USoundBase *ShootSound;
+
 	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	void NativeShoot();
 };

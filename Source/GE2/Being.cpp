@@ -6,6 +6,8 @@
 #include "GameFramework/InputSettings.h"
 #include "Kismet/KismetSystemLibrary.h"
 
+#include "GameFramework/Actor.h"
+#include "Kismet/GameplayStatics.h"
 
 ABeing::ABeing() : Dancing(false)
 {
@@ -69,3 +71,10 @@ void ABeing::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 // 	PlayerInputComponent->BindAxis(MyAxis, this, &ABeing::MyAxis);
 }
 
+void ABeing::NativeShoot()
+{
+	FVector CurrentLocation = GetActorLocation();
+
+	UGameplayStatics::PlaySoundAtLocation(this, ShootSound, CurrentLocation);
+	
+}
