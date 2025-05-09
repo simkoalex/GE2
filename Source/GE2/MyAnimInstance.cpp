@@ -1,5 +1,5 @@
-#include "Being.h"
 #include "MyAnimInstance.h"
+#include "Being.h"
 
 bool UMyAnimInstance::CanTakeIdleToDancing() const
 {
